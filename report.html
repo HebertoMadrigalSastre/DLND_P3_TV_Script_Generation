@@ -13079,25 +13079,6 @@ ul.typeahead-list  > li > a.pull-right {
 .ansi-bold { font-weight: bold; }
 
     </style>
-<style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
-a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
-body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
-body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
-  display: none;
-}
-
-#menubar.only-panel #menus.navbar-default {
-    background: #fff;
-    border-color: #fff;
-}
-
-.toolbar.with-statusbar{
-    margin-top: 3px;
-    margin-bottom: 0;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -13131,7 +13112,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13756,6 +13737,7 @@ out = output[:, -1]</code></pre>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># TODO: Implement function   </span>
         
+        <span class="n">nn_input</span> <span class="o">=</span> <span class="n">nn_input</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>
         
         <span class="n">embedded</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embeddedLayer</span><span class="p">(</span><span class="n">nn_input</span><span class="p">)</span>
         <span class="n">lstm_output</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">embedded</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span>
@@ -13858,6 +13840,8 @@ out = output[:, -1]</code></pre>
 <span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="c1"># TODO: Implement Function</span>
+    
+    <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">long</span><span class="p">()</span>
     
     <span class="c1"># ---------------------------------------------------------------------------------------------</span>
     <span class="c1"># move data to GPU, if available</span>
